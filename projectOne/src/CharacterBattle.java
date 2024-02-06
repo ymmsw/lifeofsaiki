@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -24,9 +25,12 @@ public class CharacterBattle {
         for(int i = 1;  i <= oddRounds; i++){
             System.out.println("ROUND " + i);
 
-            System.out.println("PLAYER 1");
-            System.out.println("Enter the name of an anime character: ");
+            System.out.println("Enter the name of any character in media you prefer: ");
             String Player1 = animegame.nextLine();
+            System.out.println(Player1);
+            System.out.println("remember to give character stats based on the they are given canonically");
+
+
             System.out.println("Name your Special Move: ");
             String AttackName1 = animegame.nextLine();
 
@@ -40,9 +44,11 @@ public class CharacterBattle {
             int AttackSpeed1 = Integer.parseInt(animegame.nextLine());
 
 
-            System.out.println("PLAYER 2");
-            System.out.println("Enter the name of an anime character: ");
+            System.out.println("Enter the name of any character in media you prefer: ");
             String Player2 = animegame.nextLine();
+            System.out.println(Player2);
+            System.out.println("remember to give character stats based on the they are given canonically");
+
             System.out.println("Name your Special Move: ");
             String AttackName2 = animegame.nextLine();
 
@@ -87,11 +93,18 @@ public class CharacterBattle {
             } else if (HP2 <= 0){
                 System.out.println(Player1 + " WON... for now ");
                 winpoint1++;
-                System.out.println(Player1 + " WINS: ");
+                System.out.println(Player1 + " WINS: " + winpoint1);
 
             }
 
 
+        }
+        if(winpoint1 > winpoint2){
+            System.out.println("PLAYER 1 WON THE ENTIRE GAME");
+            System.out.println("Congrats gal");
+        } else if (winpoint2 > winpoint1){
+            System.out.println("PLAYER 1 WON THE ENTIRE GAME");
+            System.out.println("Congrats gal");
         }
 
 
